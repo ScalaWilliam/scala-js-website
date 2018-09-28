@@ -1,7 +1,13 @@
 ### GENERAL SETTINGS ###
 
 # Gems
-gems: [jekyll-paginate, jekyll-assets, sass, execjs, uglifier]
+gems:
+  - jekyll-paginate
+  - jekyll-assets
+  - sass
+  - execjs
+  - uglifier
+  - jekyll-redirect-from
 
 # Site settings
 title: Scala.js
