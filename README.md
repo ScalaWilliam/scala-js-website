@@ -18,22 +18,24 @@ we will need to set up some Ruby tooling.
 First, install RVM (Ruby Version Manager): https://rvm.io/rvm/install
 Then run the following commands:
 ```bash
-$ source ~/.rvm/scripts/rvm
-# Use Ruby 2.2.3
-$ rvm use 2.2.3 --install --fuzzy
+$ rvm use 2.2.3 --install
+
 # Set up Bundler, a Ruby package manager
 # It downloads dependencies specified in a Gemfile
 # but into a local path unlike gem 
 $ gem install bundler
-# Install dependencies such as Jekyll and its plugins
+ # and if this fails, try installing libffi first (distro-specific):
+ # sudo apt install libffi-dev
+
+# Install dependencies such as Jekyll and its plugins:
 $ bundle install
-# Test run of page build
+
+# Do a full biuld:
 $ bundle exec jekyll build
 ```
 
 ## Editing live
 This is what you would do after initial installation:
 ```bash
-$ source ~/.rvm/scripts/rvm; rvm use 2.2.3
-$ bundle exec jekyll serve
+$ bundle exec jekyll serve --watch
 ```
